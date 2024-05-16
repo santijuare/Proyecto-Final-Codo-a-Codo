@@ -28,8 +28,10 @@
   list-style: none;
   text-decoration: none;
   border: 0;
-  border: 1px solid red;
+  /* border: 1px solid red; */
   font-family: "Montserrat", sans-serif;
+  text-transform: capitalize;
+  transition: all 0.4s cubic-bezier(0, 1.57, 0.67, 1.18);
 }
 
 body {
@@ -47,7 +49,8 @@ header {
   padding: 0 5%;
   height: 100px;
   position: fixed;
-  background-color: white;
+  background-color: rgb(75, 72, 72);
+  z-index: 1000;
 }
 
 .logo {
@@ -68,17 +71,20 @@ header {
   cursor: pointer;
   color: #f2f2f2;
 }
+
 .item:hover {
   color: #ff2258;
 }
+
 #check {
   display: none;
 }
+
 .tres_lineas {
   width: 40px;
   display: initial;
   border-radius: 10px;
-  margin-top: 75PXpx;
+  margin-top: 75px;
   cursor: pointer;
 }
 
@@ -108,6 +114,7 @@ label {
   width: 100%;
   top: 150px;
 }
+
 #imgmarvel {
   width: 40%;
 }
@@ -120,6 +127,7 @@ label {
   background-color: #f2f2f2;
   position: absolute;
 }
+
 @media (max-width: 620px) {
   .item {
     display: none;
@@ -132,18 +140,23 @@ label {
     border: 0;
     padding: 0;
   }
+
   .btn {
     display: none;
   }
+
   .opciones {
     justify-content: flex-start;
   }
+
   label {
     display: initial;
   }
+
   .opciones {
     display: none;
   }
+
   opciones {
     display: none;
   }
@@ -160,9 +173,10 @@ label {
   flex-direction: column;
   align-items: center;
   position: absolute;
-  bottom: 0;
+  bottom: -50;
   width: 100%;
 }
+
 .footer__redes {
   img {
     width: 30px;
@@ -172,4 +186,121 @@ label {
 
 .hero {
   margin-top: 150px;
+}
+
+#titulo {
+  /* Estilos para el título "colecciones" */
+  text-align: center;
+  color: rgb(0, 0, 0);
+  font-size: 40px; 
+}
+
+#titulo-colecciones {
+  /* Estilos para el título "colecciones" */
+  text-align: center;
+  color: red;
+  border: 5px solid #17dd49;
+  font-size: 40px; 
+  margin-top: 20px; 
+  margin-bottom: 20px;
+  background-color: #555353;
+  padding: 10px;
+}
+
+.box-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  background: #ccc;
+}
+
+.box {
+  flex: 1 1 300px;
+  background: #fff;
+  border: 1px solid  #17dd49;
+  position: relative;
+  overflow: hidden;
+  margin: 20px;
+  
+}
+
+.box .image {
+  padding: 10px;
+  background:  #494949;
+  text-align: center;
+}
+
+.box .image img {
+  height: 200px;
+  width: 250px;
+  object-fit: contain;
+  filter: drop-shadow(0 3px 5px rgba(0, 0, 0, 0.7));
+}
+
+.box .info .title {
+  padding: 10px;
+  color: #666;
+  font-size: 20px;
+}
+
+.box .info .subInfo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 10px;
+  border-top: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.box .info .subInfo .price {
+  color: #ff3300;
+  font-size: 20px;
+}
+
+.box .info .subInfo .price span {
+  font-size: 15px;
+  color: #999;
+  text-decoration: line-through;
+}
+
+.box .info .subInfo .stars i {
+  color: #ffa500;
+  font-size: 17px;
+}
+
+.box .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 223px;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: none;
+  transform: scale(0);
+}
+
+.box:hover .overlay {
+  transform: scale(1);
+}
+
+.box .overlay a {
+  color: #666;
+  background: #fff;
+  margin: 10px;
+  padding: 13px 15px;
+  font-size: 25px;
+  transform: translateY(-150);
+  transition-property: transform;
+  transition-delay: calc(0.1s * var(--i));
+}
+
+.box .overlay a:hover {
+  color: #ffa500;
+}
+
+.box:hover .overlay a {
+  transform: translateY(0px);
 }
