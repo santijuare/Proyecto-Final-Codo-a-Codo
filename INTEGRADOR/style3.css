@@ -27,17 +27,24 @@
   box-sizing: border-box;
   list-style: none;
   text-decoration: none;
+  color:white;
   border: 0;
   /* border: 1px solid red; */
   font-family: "Montserrat", sans-serif;
   text-transform: capitalize;
   transition: all 0.4s cubic-bezier(0, 1.57, 0.67, 1.18);
+  h2{
+    color:black;
+  }
+
 }
 
 body {
   height: 145vh;
   position: relative;
   background-image: url(./CURSADA/metal_8080.jpg);
+  
+  
 }
 
 header {
@@ -47,14 +54,17 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 0 5%;
-  height: 100px;
+  height: 70px;
   position: fixed;
   background-color: rgb(75, 72, 72);
   z-index: 1000;
+
 }
 
+
 .logo {
-  height: 150px;
+  height:104px;
+  width: 120px
   cursor: pointer;
 }
 
@@ -184,27 +194,71 @@ label {
   }
 }
 
+/* section hero */
+
 .hero {
-  margin-top: 150px;
+  position: relative;
+  height: 70vh;
+  overflow: hidden;
+  margin-top: 70px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+ video{
+  position: absolute;
+  z-index: -1;
+  autoplay: true;
+  loop: true;
+  object-fit: cover;
+  opacity: 0.8;  
+}
+h2 {
+    position: absolute;
+    color: gray;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 80px;
+    mix-blend-mode: difference;
+    
+  }
+}
+/* novedades */
+.novedades{
+padding-top: 60px;
 }
 
 #titulo {
   /* Estilos para el título "colecciones" */
-  text-align: center;
+
   color: rgb(0, 0, 0);
-  font-size: 40px; 
+  font-size: 30px;
+  margin-bottom: 20px;
+  padding-left: 20px;
 }
 
 #titulo-colecciones {
   /* Estilos para el título "colecciones" */
   text-align: center;
-  color: red;
-  border: 5px solid #17dd49;
-  font-size: 40px; 
-  margin-top: 20px; 
+
+  font-size: 40px;
+  margin-top: 20px;
   margin-bottom: 20px;
-  background-color: #555353;
+  border-bottom: 1px solid #000;
+
   padding: 10px;
+  width: 50%;
+  margin: 0 auto;
+  h3 {
+  }
+
+  img {
+    width: 100px;
+    background: none;
+    height: 60px;
+  }
 }
 
 .box-container {
@@ -212,22 +266,22 @@ label {
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  background: #ccc;
+
+  margin-top: 20px;
 }
 
 .box {
   flex: 1 1 300px;
   background: #fff;
-  border: 1px solid  #17dd49;
+  border: 1px solid #17dd49;
   position: relative;
   overflow: hidden;
   margin: 20px;
-  
 }
 
 .box .image {
   padding: 10px;
-  background:  #494949;
+  background: #494949;
   text-align: center;
 }
 
@@ -307,14 +361,15 @@ label {
 
 /* El Modal (fondo) */
 .modal {
-  display: flex;
+  /* display: flex; */
+  display: none;
   position: fixed;
   z-index: 1;
   left: 30px;
   top: 300px;
   width: 100%;
   height: 100%;
-  background-color: rgba(0,0,0,0.9);
+  background-color: rgba(0, 0, 0, 0.9);
   align-items: center;
   justify-content: center;
 }
@@ -344,8 +399,12 @@ label {
 }
 
 @keyframes zoom {
-  from {transform: scale(0)} 
-  to {transform: scale(1)}
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
 }
 
 /* El Botón de Cerrar */
@@ -364,4 +423,11 @@ label {
   color: #bbb;
   text-decoration: none;
   cursor: pointer;
+}
+
+
+@media (max-width: 748px) {
+h2{
+  font-size: 40px;
+}
 }
