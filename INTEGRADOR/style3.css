@@ -296,18 +296,25 @@ h2 {
 
 /* Unete a nosotros */
 
+.unete {
+  text-align: center; 
+}
+
 .unete #titulo {
-  text-align: left;
-  left: 0px;
-  top: 0;
-  margin: 0;
+  text-align: left; 
+  margin-bottom: 20px; 
+  font-size: 30px;
+}
+.unete .btn {
+  display: inline-block; /* Convertir los botones en elementos en línea */
+  margin: 5px; /* Agregar espacio entre los botones */
 }
 
 .unete .btn {
+  text-align: center;
   background-color: rgb(75, 72, 72);
   color: white;
   padding: 15px 20px;
-  margin: 5px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -316,7 +323,7 @@ h2 {
 }
 
 .unete .btn:hover {
-  background-color:  #ff2258;
+  background-color: #ff2258;
 }
 
 #titulo {
