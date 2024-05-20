@@ -105,14 +105,7 @@ label {
   display: none;
 }
 
-.btn {
-  padding: 8px 24px;
-  border-radius: 20px;
-  background-color: #ff2258;
-  color: #f2f2f2;
-  font-weight: 600;
-  cursor: pointer;
-}
+
 
 .btn:hover {
   background-color: #c10b38;
