@@ -293,9 +293,30 @@ h2 {
     
   }
 }
-/* novedades */
-.novedades{
-padding-top: 60px;
+
+/* Unete a nosotros */
+
+.unete #titulo {
+  text-align: left;
+  left: 0px;
+  top: 0;
+  margin: 0;
+}
+
+.unete .btn {
+  background-color: rgb(75, 72, 72);
+  color: white;
+  padding: 15px 20px;
+  margin: 5px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.unete .btn:hover {
+  background-color:  #ff2258;
 }
 
 #titulo {
