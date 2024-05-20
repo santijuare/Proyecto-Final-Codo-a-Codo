@@ -6,14 +6,15 @@
   --bg-metal: #ced4da;
   --bg-mostaza: #ffcb69;
   --bg-naranja1: #d08c60;
-  --bg-marron: #997b66;
-  --bg-verde-oliva: #797d62;
+  --bg-marron: #4b4848;
+  --bg-verde: #17dd49;
   --bg-azul: #023047;
   --bg-rosita: #f7bfd8;
   --bg-color-lila: #cbc6f4;
   --bg-naranja: #eb5e28;
   --bg-naranja-claro: #f4a261;
   --bg-lila-plateado: #b8bedd;
+  
 
   /* colores de textos */
   --text-color-blanco: #fafafa;
@@ -178,21 +179,94 @@ label {
 }
 
 /* footer */
-.footer {
-  background-color: #f2f2f2;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  position: absolute;
-  bottom: -50;
-  width: 100%;
+.footer,
+footer.container {
+  min-width: 100%;
+  background: var();
+  margin-top: 20px;
+  margin-bottom: 20px;
+  background-color: var(--bg-marron);
 }
 
-.footer__redes {
-  img {
-    width: 30px;
-    margin: 0 10px;
-  }
+#section-footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  gap: 40px;
+}
+#section-footer h3 {
+  color: var(--bg-verde);
+  text-align: initial;
+  font-size: 120%;
+  font-weight: 400;
+}
+
+.contenedor-redes {
+  display: flex;
+  flex-direction: column;
+}
+
+ul.redes {
+  margin-top: 15px;
+  justify-content: space-evenly;
+  color: var(--text-color-gris);
+  margin-bottom: none;
+}
+.redes {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  font-size: 30px;
+}
+
+.ayuda {
+  margin-top: 12px;
+}
+
+li.sub-categorias,
+a {
+  display: flex;
+  padding-bottom: 5px;
+  color: var(--text-color-blanco);
+}
+
+.contenedor-datafiscal img {
+  align-items: center;
+  width: 100px;
+  padding: 12px;
+}
+ul.contacto {
+  margin-top: 15px;
+}
+
+.disabled {
+  background-color: var(--bg-rojo);
+  color: var(--text-color-blanco);
+  cursor: not-allowed;
+  border: none;
+}
+
+.disabled :hover {
+  color: var(--text-color-blanco);
+  cursor: not-allowed;
+  border: none;
+}
+
+.add-modal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--bg-verde);
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  transition: all 0.5s ease-out;
+  transform: translateY(200%);
+}
+
+.active-modal {
+  transform: translateY(0);
+  transition: all 0.5s ease-in;
 }
 
 /* section hero */
