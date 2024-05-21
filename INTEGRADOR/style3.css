@@ -39,8 +39,11 @@
   }
   
 
-}
 
+}
+html{
+  scroll-behavior: smooth;
+}
 body {
   height: 145vh;
   position: relative;
