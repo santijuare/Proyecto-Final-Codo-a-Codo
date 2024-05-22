@@ -15,7 +15,6 @@
   --bg-naranja-claro: #f4a261;
   --bg-lila-plateado: #b8bedd;
 
-
   /* colores de textos */
   --text-color-blanco: #fafafa;
   --text-color-negro: #000000;
@@ -30,17 +29,13 @@
   text-decoration: none;
   color: white;
   border: 0;
-  /* border: 1px solid red; */
   font-family: "Montserrat", sans-serif;
   text-transform: capitalize;
   transition: all 0.4s cubic-bezier(0, 1.57, 0.67, 1.18);
+}
 
-  h2 {
-    color: black;
-  }
-
-
-
+h2 {
+  color: black;
 }
 
 html {
@@ -51,8 +46,7 @@ body {
   height: 145vh;
   position: relative;
   background-image: url(./CURSADA/metal_8080.jpg);
-
-
+  overflow-x: hidden; /* Evita el desbordamiento horizontal */
 }
 
 header {
@@ -66,13 +60,12 @@ header {
   position: fixed;
   background-color: rgb(75, 72, 72);
   z-index: 1000;
-
 }
-
 
 .logo {
   height: 104px;
-  width: 120px cursor: pointer;
+  width: 120px;
+  cursor: pointer;
 }
 
 .opciones {
@@ -93,79 +86,21 @@ header {
   color: #ff2258;
 }
 
-
-
-
-
 .btn:hover {
   background-color: #c10b38;
 }
 
 
 
-/* Media queries para teléfonos */
-@media (max-width: 768px) {
-  body {
-    font-size: 14px;
-    /* Reducir el tamaño de fuente para teléfonos */
-  }
-}
-
-/* Media queries para tablets */
-@media (min-width: 769px) and (max-width: 1024px) {
-  body {
-    font-size: 16px;
-    /* Ajustar el tamaño de fuente para tablets */
-  }
-}
-
-/* Media queries para PC */
-@media (min-width: 1025px) {
-  body {
-    font-size: 18px;
-    /* Ajustar el tamaño de fuente para PC */
-  }
-
-
-
-  header {
-    display: flex;
-    flex-direction: column;
-    justify-content: right;
-    border: 0;
-    padding: 0;
-  }
-}
-
-.btn {
-  display: none;
-}
-
-.opciones {
-  justify-content: flex-start;
-}
-
-label {
-  display: initial;
-}
-
-.opciones {
-  display: none;
-}
-
-opciones {
-  display: none;
-}
-
-
 /* footer */
-.footer,
-footer.container {
-  min-width: 100%;
-  background: var();
+.footer, footer.container {
+  width: 100%;
+  background: var(--bg-marron);
   margin-top: 20px;
   margin-bottom: 20px;
-  background-color: var(--bg-marron);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
 #section-footer {
@@ -191,7 +126,6 @@ ul.redes {
   margin-top: 15px;
   justify-content: space-evenly;
   color: var(--text-color-gris);
-  margin-bottom: none;
 }
 
 .redes {
@@ -205,8 +139,7 @@ ul.redes {
   margin-top: 12px;
 }
 
-li.sub-categorias,
-a {
+li.sub-categorias, a {
   display: flex;
   padding-bottom: 5px;
   color: var(--text-color-blanco);
@@ -229,31 +162,13 @@ ul.contacto {
   border: none;
 }
 
-.disabled :hover {
+.disabled:hover {
   color: var(--text-color-blanco);
   cursor: not-allowed;
   border: none;
 }
 
-.add-modal {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: var(--bg-verde);
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  transition: all 0.5s ease-out;
-  transform: translateY(200%);
-}
-
-.active-modal {
-  transform: translateY(0);
-  transition: all 0.5s ease-in;
-}
-
 /* section hero */
-
 .hero {
   position: relative;
   height: 70vh;
@@ -263,30 +178,28 @@ ul.contacto {
   display: flex;
   justify-content: center;
   align-items: center;
+}
 
-  video {
-    position: absolute;
-    z-index: -1;
-    autoplay: true;
-    loop: true;
-    object-fit: cover;
-    opacity: 0.8;
-  }
+.hero video {
+  position: absolute;
+  z-index: -1;
+  autoplay: true;
+  loop: true;
+  object-fit: cover;
+  opacity: 0.8;
+}
 
-  h2 {
-    position: absolute;
-    color: gray;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 80px;
-    mix-blend-mode: difference;
-
-  }
+.hero h2 {
+  position: absolute;
+  color: gray;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 80px;
+  mix-blend-mode: difference;
 }
 
 /* Unete a nosotros */
-
 .unete {
   text-align: center;
   padding-top: 30px;
@@ -321,7 +234,6 @@ ul.contacto {
 
 #titulo {
   /* Estilos para el título "colecciones" */
-
   color: rgb(0, 0, 0);
   font-size: 30px;
   margin-bottom: 20px;
@@ -331,22 +243,19 @@ ul.contacto {
 #titulo-colecciones {
   /* Estilos para el título "colecciones" */
   text-align: center;
-
   font-size: 40px;
   margin-top: 20px;
   margin-bottom: 20px;
   border-bottom: 1px solid #000;
-
   padding: 10px;
   width: 50%;
   margin: 0 auto;
+}
 
-
-  img {
-    width: 100px;
-    background: none;
-    height: 60px;
-  }
+#titulo-colecciones img {
+  width: 100px;
+  background: none;
+  height: 60px;
 }
 
 .box-container {
@@ -354,7 +263,6 @@ ul.contacto {
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-
   margin-top: 20px;
 }
 
@@ -434,7 +342,7 @@ ul.contacto {
   margin: 10px;
   padding: 13px 15px;
   font-size: 25px;
-  transform: translateY(-150);
+  transform: translateY(-150px);
   transition-property: transform;
   transition-delay: calc(0.1s * var(--i));
 }
@@ -445,5 +353,102 @@ ul.contacto {
 
 .box:hover .overlay a {
   transform: translateY(0px);
+}
+
+
+
+
+
+/* Media queries para tablets */
+@media (min-width: 769px) and (max-width: 1024px) {
+  body {
+    font-size: 16px; /* Ajustar el tamaño de fuente para tablets */
+  }
+  header {
+    padding: 0 20px;
+  }
+
+  .opciones {
+    flex-direction: row;
+    justify-content: center;
+  }
+  .item {
+    margin: 5px 10px;
+  }
+
+  .footer, footer.container {
+    padding: 20px;
+  }
+  #section-footer {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
+
+/* Media queries para PC */
+@media (min-width: 1025px) {
+  body {
+    font-size: 18px; /* Ajustar el tamaño de fuente para PC */
+  }
+
+  header {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0,5%;
+  }
+  .btn {
+    display: none;
+  }
+  .opciones {
+    display: flex;
+    justify-content: flex-start;
+  }
+  label {
+    display: none;
+  }
+  .opciones {
+    display: flex;
+  }
+  .footer, footer.container {
+    padding: 40px;
+  }
+  #section-footer {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
+
+/* Media queries para teléfonos */
+@media (max-width: 768px) {
+  body {
+    font-size: 14px; /* Reducir el tamaño de fuente para teléfonos */
+  }
+  header {
+    flex-direction: column;
+    padding: 0 10px;
+    height: auto;
+  }
+  .logo {
+    height: 80px;
+    width: 100px;
+  }
+  .opciones {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    display: none;
+  }
+  .item {
+    margin: 10px 0;
+  }
+  
+  .footer, footer.container {
+    flex-direction: column;
+    padding: 20px;
+  }
+  #section-footer {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
