@@ -205,7 +205,7 @@ ul.contacto {
   padding-top: 30px;
 }
 
-.unete #titulo {
+.unete #titulo1 {
   text-align: left;
   margin-bottom: 20px;
   font-size: 30px;
@@ -257,6 +257,42 @@ ul.contacto {
   background: none;
   height: 60px;
 }
+#titulo-colecciones1 {
+  /* Estilos para el título "colecciones" */
+  text-align: center;
+  font-size: 40px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #000;
+  padding: 10px;
+  width: 50%;
+  margin: 0 auto;
+}
+
+#titulo-colecciones1 img {
+  width: 100px;
+  background: none;
+  height: 60px;
+}
+
+#titulo-colecciones2 {
+  /* Estilos para el título "colecciones" */
+  text-align: center;
+  font-size: 40px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #000;
+  padding: 10px;
+  width: 50%;
+  margin: 0 auto;
+}
+
+#titulo-colecciones2 img {
+  width: 100px;
+  background: none;
+  height: 60px;
+}
+
 
 .box-container {
   display: flex;
@@ -450,5 +486,7 @@ ul.contacto {
     flex-direction: column;
     align-items: center;
   }
+
+
 }
 
