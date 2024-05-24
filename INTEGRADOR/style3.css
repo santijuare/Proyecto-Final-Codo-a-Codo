@@ -50,50 +50,89 @@ body {
 }
 
 header {
-  width: 100%;
-  top: 0;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  padding: 0 5%;
-  height: 70px;
-  position: fixed;
-  background-color: rgb(75, 72, 72);
-  z-index: 1000;
+  justify-content: space-between;
+  padding: 2rem;
+  background-color: #494949;
 }
 
 .logo {
-  height: 104px;
-  width: 120px;
-  cursor: pointer;
+  max-width: 5rem;
 }
 
-.opciones {
+.nav-list {
+  list-style-type: none;
   display: flex;
-  justify-content: center;
-  align-content: center;
+  gap: 1rem;
 }
 
-.item {
-  margin: 5px 15px;
+.nav-list li a {
   font-size: 18px;
   font-weight: 600;
   cursor: pointer;
   color: #f2f2f2;
 }
 
-.item:hover {
-  color: #ff2258;
+.abrir-menu,
+.cerrar-menu {
+  display: none;
 }
+@media screen and (max-width: 550px) {
+  .hero {
+    z-index: 1;
+  }
 
-.btn:hover {
-  background-color: #c10b38;
+  .abrir-menu,
+  .cerrar-menu {
+    display: block;
+    border: 0;
+    font-size: 1.25rem;
+    background-color: transparent;
+    cursor: pointer;
+  }
+
+  .abrir-menu {
+    color: #1c1c1c;
+  }
+
+  .cerrar-menu {
+    color: #ececec;
+  }
+
+  .nav {
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    gap: 1rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    background-color: #1c1c1c;
+    padding: 2rem;
+  }
+
+  .nav.visible {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .nav-list {
+    flex-direction: column;
+    align-items: end;
+  }
+
+  .nav-list li a {
+    color: #ecececec;
+  }
 }
-
-
-
 /* footer */
-.footer, footer.container {
+.footer,
+footer.container {
   width: 100%;
   background: var(--bg-marron);
   margin-top: 20px;
@@ -139,7 +178,8 @@ ul.redes {
   margin-top: 12px;
 }
 
-li.sub-categorias, a {
+li.sub-categorias,
+a {
   display: flex;
   padding-bottom: 5px;
   color: var(--text-color-blanco);
@@ -173,7 +213,6 @@ ul.contacto {
   position: relative;
   height: 70vh;
   overflow: hidden;
-  margin-top: 70px;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -201,6 +240,7 @@ ul.contacto {
 
 /* Unete a nosotros */
 .unete {
+  margin-left: 20px;
   text-align: center;
   padding-top: 30px;
 }
@@ -292,7 +332,6 @@ ul.contacto {
   background: none;
   height: 60px;
 }
-
 
 .box-container {
   display: flex;
@@ -391,14 +430,10 @@ ul.contacto {
   transform: translateY(0px);
 }
 
-
-
-
-
 /* Media queries para tablets */
 @media (min-width: 769px) and (max-width: 1024px) {
   body {
-    font-size: 16px; /* Ajustar el tamaño de fuente para tablets */
+    font-size: 16px;
   }
   header {
     padding: 0 20px;
@@ -412,7 +447,8 @@ ul.contacto {
     margin: 5px 10px;
   }
 
-  .footer, footer.container {
+  .footer,
+  footer.container {
     padding: 20px;
   }
   #section-footer {
@@ -427,12 +463,10 @@ ul.contacto {
     font-size: 18px; /* Ajustar el tamaño de fuente para PC */
   }
 
-  header {
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 0,5%;
-  }
-  .btn {
+  /* header {
+    /* flex-direction: row; */
+
+  */ .btn {
     display: none;
   }
   .opciones {
@@ -445,7 +479,8 @@ ul.contacto {
   .opciones {
     display: flex;
   }
-  .footer, footer.container {
+  .footer,
+  footer.container {
     padding: 40px;
   }
   #section-footer {
@@ -458,35 +493,44 @@ ul.contacto {
 @media (max-width: 768px) {
   body {
     font-size: 14px; /* Reducir el tamaño de fuente para teléfonos */
-  }
-  header {
-    flex-direction: column;
-    padding: 0 10px;
-    height: auto;
-  }
-  .logo {
-    height: 80px;
-    width: 100px;
-  }
-  .opciones {
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    display: none;
-  }
-  .item {
-    margin: 10px 0;
-  }
-  
-  .footer, footer.container {
-    flex-direction: column;
-    padding: 20px;
-  }
-  #section-footer {
-    flex-direction: column;
-    align-items: center;
-  }
 
+    header {
+      flex-direction: row;
+      padding: 0 30px;
+    }
+    .logo {
+      height: 80px;
+      width: 100px;
+    }
+    .opciones {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+    }
+    .item {
+      margin: 10px 0;
+    }
 
+    .footer,
+    footer.container {
+      flex-direction: column;
+      padding: 20px;
+    }
+    #section-footer {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
 }
 
+@media (max-width: 425px) {
+  .hero h2 {
+    font-size: 40px;
+  }
+
+  .hero video {
+    width: 100%;
+    height: 100%;
+  }
+}

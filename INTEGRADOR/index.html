@@ -11,6 +11,10 @@
     <title>DHARMA 3D</title>
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
     <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css"
+    />
+    <link
       rel="icon"
       href="https://img.icons8.com/?size=100&id=21564&format=png&color=000000"
       type="image/svg+xml"
@@ -18,21 +22,17 @@
   </head>
 
   <body>
-    <header id="Header">
-      <img src="./DHARMA-SINFONDO.png" class="logo" alt="logo" title="logo" />
-      <ul class="opciones">
-        <li class="item"><a href="#">Inicio</a></li>
-        <li class="item"><a href="#colect"> Colecciones </a></li>
-        <li class="item"><a href="#contact-section"> Contacto </a></li>
-      </ul>
-
-      <!-- ACA HABRIA QUE CREAR EL BOTON DE HAMBURGUESA  -->
-
-      <div class="hamburger-menu" id="hamburger-menu">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
+    <header>
+      <img class="logo" src="./DHARMA-SINFONDO.png" alt="Logo" />
+      <button id="abrir" class="abrir-menu"><i class="bi bi-list"></i></button>
+      <nav class="nav" id="nav">
+        <button class="cerrar-menu" id="cerrar"><i class="bi bi-x"></i></button>
+        <ul class="nav-list">
+          <li><a href="#">Inicio</a></li>
+          <li><a href="#titulo">Colecciones</a></li>
+          <li><a href="#contact-section">Contacto</a></li>
+        </ul>
+      </nav>
     </header>
 
     <main>
@@ -775,5 +775,6 @@
         </div>
       </section>
     </footer>
+    <script src="./scripts.js"></script>
   </body>
 </html>
